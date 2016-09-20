@@ -25,7 +25,10 @@ public class Startup {
     };
  
     public static void main(String[] args) {
-        
+        //ServiceQuality serviceQuality = ServiceQuality.GOOD;       
+        FoodServiceTipCalculator bag = new FoodServiceTipCalculator(FoodServiceTipCalculator.ServiceQuality.GOOD, 2);
+        TipCalculatorManager tippy = new TipCalculatorManager(bag);
+        System.out.println("Your tip will be: " + tippy.retrieveTip());
         
     }
 
