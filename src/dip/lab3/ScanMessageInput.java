@@ -14,14 +14,14 @@ import java.util.Scanner;
 public class ScanMessageInput implements MessageInput{
     private String message;
     
-    public ScanMessageInput(String m){
-        message = m;
+    public ScanMessageInput(){
+        message = "";
     }
     @Override
     public final String GetInput(){
         System.out.println("Enter your string: ");
         Scanner sc = new Scanner(System.in);
-        message = sc.next();
+        message = sc.nextLine();
         return message;
     }
 }
